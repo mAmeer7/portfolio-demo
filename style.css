@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap');
+
+    * {
+        box-sizing: border-box;
+
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    margin: 0;
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+.container-foot{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    
+}
+/* typography
+++++++++++++++++++++++++++++ */
+.title{
+    font-size: 2.2rem;
+}
+.title span{
+    margin-top: .6em;
+    font-weight: 300;
+    display: block;
+    font-size: .6em;
+}
+ .head-box{
+    font-weight: 300;
+    font-size:2.2rem;
+    color: #FFF;
+    margin-top: .7em;
+}
+
+.home-about-textbox p{
+    padding: 0 1.5em;
+}
+
+.clearfix::after, section::after{
+ content: '';
+ display: block;
+ clear: both;
+}
+
+
+
+
+@media (min-width:860px){
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .home-about-textbox p{
+        padding: 0 10em;
+        text-align: left;
+    }
+
+
+
+}
+
+/* button
+++++++++++++++++++++++ */
+
+.button{
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 3px solid ;
+    padding: .5em 1.5em;
+}
+
+.button-accent-1{
+    color: #fff;
+    border-color: #fff;
+    transition: ease-in-out .3s;
+}
+
+.button-accent-2{
+    color: #ddd;
+    border-color: #ddd;
+    transition: ease-in-out .3s;
+}
+.button-accent-2:hover,
+.button-accent-2:focus{
+    color: #FFF;
+    border-color:#FFF;
+    
+    
+}
+
+.button-accent-1:hover,
+.button-accent-1:focus{
+    color: #FFF;
+    border-color: rgb(230, 140, 37);
+    background-color: rgba(230, 140, 37,0.8);
+    
+}
+
+.button-small{
+    font-size: .7em;
+    font-weight: 700;
+}
+
+
+
+
+/* Header 
+----------------------------*/
+
+header {
+    position: absolute;
+        
+        margin: 4rem 1.3rem;
+        
+        left: 0;
+        right: 0;
+
+}
+ @media (min-width: 800px){
+    
+    nav ul {
+        float: right;
+    }
+    header{
+        margin: 1.2rem  2rem;
+    }
+
+ }
+
+nav ul{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+nav li{
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size:0.9rem;
+    padding: .5em;
+    color: #FFF;
+    
+}
+
+nav a:hover,
+nav a:focus{
+    color: #ddd;
+
+}
+
+/* Home Hero
+----------------------- */
+
+.home-hero{
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(img/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10em 0;  
+    color: #FFF;
+    height: 100vh;
+    padding-top: 35vh;
+}
+
+/* Home-about
+---------------------------------- */
+.home-about-textbox {
+   
+    margin-top: -1em;
+    background-color:#232323;
+    padding: 2em 0;
+    outline: 2px solid peru;
+    outline-offset: -1em;
+    color: #ddd;  
+
+}
+
+/* Portfolio
+------------------------------------ */
+
+.portfolio{
+  
+   
+    background-color: rgb(239, 239, 239);
+    padding-top: 2em;
+    
+
+}
+
+.portfolio h1{
+    margin-top: 5px;
+    padding: 2em 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    
+}
+
+.port-item{
+    margin: 0;
+    position: relative;
+}
+.port-desc{
+    position: absolute;
+    z-index: 100;
+    bottom: 2.5em;
+    left: 2em;
+    right: 2em;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1em;
+    border-radius: 25px;
+    
+}
+
+.port-item img{
+    display: block;
+}
+
+.port-desc p{
+    margin-top: 0;
+}
+
+@media(min-width:600px){
+    .portfolio h1{
+        font-size: 2.8em;
+    }
+    .port-item{
+        width: 50%;
+        float: left;
+        overflow: hidden;
+    }
+    .port-desc{
+        transform: translateY(130%);
+        position: absolute;
+        bottom: 0em;
+        left: 0em;
+        right: 0em;
+        border-radius: 0px;
+        transition: ease-in-out 250ms
+    }
+    .port-item:hover .port-desc{
+        transform: translateY(0%);
+}
+}
+
+@media(min-width:1220px){
+    .port-item{
+        width: 33.3%;
+        overflow: hidden;
+        
+    }
+    .port-desc{
+        transform: translateY(130%);
+        position: absolute;
+        bottom: 0em;
+        left: 0em;
+        right: 0em;
+        border-radius: 0px;
+        transition: ease-in-out 250ms
+    }
+
+    .port-item:hover .port-desc{
+        transform: translateY(0%);
+        
+        
+    }
+}
+
+
+
+/* Footer
++++++++++++++++++++++++++++++++++++++++ */
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-body{
+
+    padding: .5em;
+}
+.list-head{
+    padding: 0 .5em .5em .5em;
+}
+footer{
+    background: #232323;
+    color: #ddd;
+    text-align: left;
+    padding: 5em 0;
+}
+
+[class^=col-]{
+    float: left;
+    padding: 0 .5em;
+}
+[class^=col-]:first-child{
+    padding-left: 0;
+}
+[class^=col-]:last-child{
+    padding-right: 0;
+}
+
+
+footer p{
+    margin-top: 0;
+}
+.col-3{
+    
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1.5em;
+    padding-right: 0;
+    
+        }
+
+.col-1{
+   
+    width: 33.3%;
+    
+
+}
+
+@media (min-width: 600px){
+    .col-3{
+    
+        width: 50%;
+        padding-right: 1em;   
+     }
+    
+    .col-1{
+       
+        width: 16.6%;
+        padding-left: 1em;
+    
+    }
+
+}
+
+
+
